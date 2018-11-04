@@ -17,13 +17,11 @@ A user can create a new account and log in. If a user does not create an account
 
 1. Fork and clone this repository to your local environment.
 2. Navigate to the file directory from your terminal.
-3. Run 'bundle install' to install all required gems for the backend.
-4. Run 'rails db:migrate' to set up database on the backend's directory.
-5. Run 'rails s -p 4000' to start the server.
-6. Navigate to http://localhost:4000/ and this will be the backend's database server.
-7. Run npm start and you should be prompted to http://localhost:3000/
-8. For a quick demo, simply click submit and the game will start.
-9. For a quick tutorial of the App: [SpaceShip Shooter App](https://youtu.be/Mn6nAQIv57g).
+3. Since the backend api is hosted on the web on 'https://space-shooter-api.herokuapp.com', there is no need to fork and clone the backend api.
+4. Run npm start and you should be prompted to http://localhost:3000/
+5. For a quick demo, simply click submit and the game will start.
+6. For a quick tutorial of the App: [SpaceShip Shooter App](https://youtu.be/Mn6nAQIv57g).
+7. For a live Heroku on the Web, simply navigate to [SpaceShip Shooter Heroku](https://blooming-garden-39476.herokuapp.com/).
 
 # ScreenShots of Game In Action
 <div display="inline">
