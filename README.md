@@ -21,7 +21,7 @@ A user can create a new account and log in. If a user does not create an account
 4. Run npm start and you should be prompted to http://localhost:3000/
 5. For a quick demo, simply click submit and the game will start.
 6. For a quick tutorial of the App: [SpaceShip Shooter App](https://youtu.be/Mn6nAQIv57g).
-7. For a live Heroku on the Web, simply navigate to [SpaceShip Shooter Heroku](https://blooming-garden-39476.herokuapp.com/).
+7. To play live on Heroku on the Web, simply navigate to [SpaceShip Shooter Heroku](https://blooming-garden-39476.herokuapp.com/).
 
 # ScreenShots of Game In Action
 <div display="inline">
