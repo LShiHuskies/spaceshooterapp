@@ -11,7 +11,8 @@ The controls of the game are ASWD as A is to go left, S is to go down, D is to g
 
 A user can create a new account and log in. If a user does not create an account and sign in, he or she can elect to simply click submit and the game will simply start, however his or her high scores will not be registered.
 
-<img width="500" alt="screen shot 2018-08-13 at 6 02 05 pm" src="https://user-images.githubusercontent.com/34640293/44060577-19a2845e-9f23-11e8-861a-d3fc887fb7f4.png">
+<img width="500" alt="screen shot 2018-11-07 at 5 32 06 pm" src="https://user-images.githubusercontent.com/34640293/48165313-2efa9e80-e2b3-11e8-9298-8e8b07e9433f.png">
+
 
 # Direction on how to run and start the program
 
