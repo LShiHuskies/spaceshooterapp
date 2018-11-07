@@ -6,7 +6,7 @@ class Login extends Component {
     render() {
         return (
             <div class='login'>
-                <h1 style={{color: "red", textAlign: "center"}}>Please Sign In</h1>
+                <h1 style={{color: "red", textAlign: "center", marginTop: '20px', marginBottom: '20px'}}>Please Sign In</h1>
                 <form onSubmit={this.props.handleSubmit} onChange={this.props.handleChange} style={{textAlign: 'right'}}>
 
                     <label htmlFor="username" style={{color: 'green'}}> USER NAME: </label>
@@ -17,11 +17,11 @@ class Login extends Component {
                     <p id='line' style={{marginTop: '0px'}} >_______________________________________</p>
                     <button id='submit' type="submit">Sign In</button>
                 </form>
-                <div style={{textAlign: "center"}}>
+                {/*<div style={{textAlign: "center"}}>
                 {this.props.highScoreToggle == false ? <button onClick={this.props.handleClick}>High Scores</button>
                 : <button onClick={this.props.handleClick}>Remove High Scores</button>}
                 {this.props.scoreFilter.length > 0 ? <HighScore scoreFilter={this.props.scoreFilter} /> : null}
-                </div>
+                </div>*/}
             </div>
         );
     }

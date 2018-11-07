@@ -33,7 +33,7 @@
 .login {
   background-color: #C0C0C0;
   width: 500px;
-  height: 340px;
+  height: 290px;
   margin-top: 0;
   border-radius: 2px;
   box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
@@ -91,7 +91,7 @@ input::placeholder{
   font-stretch: normal;
   line-height: normal;
   letter-spacing: 0.2px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border: solid 1px #e2e6eb;
   padding-bottom: 1px;
   background-image: url('https://www.macleans.ca/wp-content/uploads/2014/07/stars-carousel.jpg');
@@ -100,14 +100,14 @@ input::placeholder{
 #line{
   width: 440px;
   margin-top: 10px;
-  margin-bottom: 20px;
   border-color: purple;
   text-align: left;
   overflow: hidden;
   margin-left: 30px;
   margin-right: 30px;
-  height: 10px;
+  height: 12px;
   background-color: #e2e6eb;
+  margin-bottom: 0px;
 
 }
 
