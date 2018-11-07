@@ -7,13 +7,15 @@ class Login extends Component {
         return (
             <div class='login'>
                 <h1 style={{color: "red", textAlign: "center"}}>Please Sign In</h1>
-                <form onSubmit={this.props.handleSubmit} onChange={this.props.handleChange}
-                  style={{color: "green", textAlign: "center", fontSize: 20}} >
-                    <label htmlFor="username">User Name</label> <br></br>
+                <form onSubmit={this.props.handleSubmit} onChange={this.props.handleChange} style={{textAlign: 'right'}}>
+
+                    <label htmlFor="username" style={{color: 'green'}}> USER NAME: </label>
                     <input type="text" placeholder="Username" name="username" value={this.props.userNameValue}/> <br></br>
-                    <label htmlFor="password" name="password" > Password </label><br></br>
-                    <input type="password" placeholder="Password" name="password"/> <br></br>
-                    <button type="submit">Submit</button>
+                    <label htmlFor="password" name="password" style={{color: 'green'}}>PASSWORD: </label>
+                    <input type="password" placeholder="Password" name="password" style={{marginTop: '3%'}}/> <br></br>
+                    <br></br>
+                    <p id='line' style={{marginTop: '0px'}} >_______________________________________</p>
+                    <button id='submit' type="submit">Sign In</button>
                 </form>
                 <div style={{textAlign: "center"}}>
                 {this.props.highScoreToggle == false ? <button onClick={this.props.handleClick}>High Scores</button>
