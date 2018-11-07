@@ -1,6 +1,6 @@
 # SpaceShip-Shooter App
 
-<img width="500" alt="screen shot 2018-08-13 at 5 56 23 pm" src="https://user-images.githubusercontent.com/34640293/44060354-6e414c1c-9f22-11e8-920e-be936ccb9599.png">
+<img width="500" alt="screen shot 2018-11-07 at 5 27 11 pm" src="https://user-images.githubusercontent.com/34640293/48165168-be538200-e2b2-11e8-9ab1-699d71ac9a0b.png">
 
 A single player SpaceShip Traveler that shoots down planets for active gamer enthusiasts inspired by Asteroids.
 
