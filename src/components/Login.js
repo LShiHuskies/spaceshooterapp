@@ -35,6 +35,12 @@ class Login extends Component {
                border: 'solid, 1px, white', fontWeight: 'bold', float: 'right' }}> Sign Up</button>
           </div>
 
+          <div id='hiscore'>
+          {this.props.highScoreToggle === false ? <button onClick={this.props.handleClick}>High Scores</button>
+          : <button onClick={this.props.handleClick}>Remove High Scores</button>}
+          {this.props.scoreFilter.length > 0 ? <HighScore scoreFilter={this.props.scoreFilter} /> : null}
+          </div>
+
 
           </React.Fragment>
         );

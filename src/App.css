@@ -127,6 +127,15 @@ input::placeholder{
   background-image: url('https://www.macleans.ca/wp-content/uploads/2014/07/stars-carousel.jpg');
 }
 
+#hiscore {
+  float: left;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 2%;
+  left: 1.5px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
