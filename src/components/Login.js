@@ -28,7 +28,7 @@ class Login extends Component {
 
     render() {
         return (
-          <React.Fragment>
+          <div>
           {this.state.signUp === false ?
             <div class='login'>
                 <h1 style={{color: "red", textAlign: "center", marginTop: '20px', marginBottom: '20px'}}>Please Sign In</h1>
@@ -99,7 +99,7 @@ class Login extends Component {
           </div>
 
 
-          </React.Fragment>
+        </div>
         );
     }
 }

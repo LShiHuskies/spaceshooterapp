@@ -11,10 +11,12 @@ class HighScore extends Component {
         }
     }
     render() {
-        
-        
+
+
         return (
-            <div style={{position: 'absolute', top:`${window.innerHeight/3}px`,left: `${window.innerWidth/4}px`, boxSizing: 'border-box',color:'cyan', padding: '5px', border: 'solid #5B6DCD 10px', width:' 50%'}}><br></br>
+            <div style={{position: 'absolute', top: '10%', boxSizing: 'border-box', color:'cyan', padding: '5px',
+              border: 'solid #5B6DCD 10px', width:'500px', textAlign: 'center'
+            }}>
                 High Scores:
                 {this.filterScores()}
             </div>
