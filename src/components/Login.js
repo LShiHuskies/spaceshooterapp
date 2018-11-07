@@ -25,7 +25,7 @@ class Login extends Component {
                 </div>*/}
             </div>
 
-          <div style={{fontSize: '14px', fontFamily: 'ProximaNova', padding: '7px',
+          <div style={{fontSize: '14px', padding: '7px',
            color: '#ffffff', width: '300px', fontHeight: 'normal', fontStretch: 'normal',
           lineHeight: 'normal', letterSpacing: '-0.2px', textAlign: 'right',
           display: 'inline', position: 'absolute', float: 'left', top: '1.5%', display: 'inline', right: '5%'}}>
@@ -35,9 +35,9 @@ class Login extends Component {
                border: 'solid, 1px, white', fontWeight: 'bold', float: 'right' }}> Sign Up</button>
           </div>
 
-          <div id='hiscore'>
-          {this.props.highScoreToggle === false ? <button onClick={this.props.handleClick}>High Scores</button>
-          : <button onClick={this.props.handleClick}>Remove High Scores</button>}
+          <div>
+          {this.props.highScoreToggle === false ? <button id='hiscore' onClick={this.props.handleClick}>High Scores</button>
+          : <button id='hiscore' onClick={this.props.handleClick}>Remove High Scores</button>}
           {this.props.scoreFilter.length > 0 ? <HighScore scoreFilter={this.props.scoreFilter} /> : null}
           </div>
 

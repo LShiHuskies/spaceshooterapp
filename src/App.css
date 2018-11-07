@@ -112,7 +112,6 @@ input::placeholder{
 
 #SIGNUP {
   padding: 0;
-  border-radius: 20px;
   width: 100px;
   height: 34px;
   text-align: center;
@@ -128,12 +127,28 @@ input::placeholder{
 }
 
 #hiscore {
+  font-size: 11px;
   float: left;
+  color: white;
   width: 45px;
   height: 45px;
-  position: absolute;
   top: 2%;
   left: 1.5px;
+  padding: 0;
+  border-radius: 20px;
+  width: 100px;
+  height: 34px;
+  text-align: center;
+  margin-right: 0;
+  margin-top: 0;
+  font-size: 11px;
+  border-radius: 100px;
+  border: solid 1px #e2e6eb;
+  position: absolute;
+  margin-left: 10px;
+  font-weight: bold;
+  background-image: url('https://www.macleans.ca/wp-content/uploads/2014/07/stars-carousel.jpg')
+
 }
 
 @keyframes App-logo-spin {
