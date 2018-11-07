@@ -95,20 +95,7 @@ class App extends Component {
       })
     }
     else {
-      alert("You're information is not in the database, would you like to create a new account?")
-      // const body = {
-      //     username: this.state.userNameValue,
-      //     password: this.state.userPassword
-      // };
-      // let config =  {
-      // method:'POST',
-      // headers:{
-      //     'Content-type':'application/json',
-      //     'Accept': 'application/json'
-      //         },
-      // body:JSON.stringify(body)
-      // }
-      // fetch("https://space-shooter-api.herokuapp.com/users", config).then(r => r.json()).then(data => this.setState({loggedIn: true, currentUser: data }))
+      alert("You're information is not in the database, would you like to create a new account?");
     }
 
   }
@@ -127,6 +114,23 @@ class App extends Component {
     fetch("https://space-shooter-api.herokuapp.com/users").then(r=> r.json()).then(data => this.getUsers(data));
   }
 
+  handleCreateAccount = (event) => {
+    event.preventDefault();
+    const body = {
+        username: this.state.userNameValue,
+        password: this.state.userPassword
+    };
+    let config =  {
+    method:'POST',
+    headers:{
+        'Content-type':'application/json',
+        'Accept': 'application/json'
+            },
+    body:JSON.stringify(body)
+    }
+    fetch("https://space-shooter-api.herokuapp.com/users", config).then(r => r.json()).then(data => this.setState({loggedIn: true, currentUser: data}))
+  }
+
 
   render() {
 
@@ -135,7 +139,7 @@ class App extends Component {
         <div class='App-header' style={{position: 'absolute', backgroundImage: 'url(https://www.macleans.ca/wp-content/uploads/2014/07/stars-carousel.jpg)',
           height: "100%", width: "100%"}}>
           {this.state.loggedIn === false ? <Login highScoreToggle={this.state.highScoreToggle} scoreFilter={this.state.scoreFilter}
-          handleClick={this.handleClick} handleDemo={this.handleDemo}
+          handleClick={this.handleClick} handleDemo={this.handleDemo} handleCreateAccount={this.handleCreateAccount}
           userNameValue={this.state.userNameValue} handleSubmit={this.handleSubmit} handleChange={this.handleChange}
           userPassword={this.state.userPassword}
           />

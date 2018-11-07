@@ -52,8 +52,7 @@ class Login extends Component {
             </div> :
             <div class='login'>
                 <h1 style={{color: "red", textAlign: "center", marginTop: '20px', marginBottom: '20px'}}>Please Create Your Account</h1>
-                <form onSubmit={this.props.handleSubmit} onChange={this.props.handleChange} style={{textAlign: 'right'}}>
-
+                <form onSubmit={this.props.handleCreateAccount} onChange={this.props.handleChange} id='create' style={{textAlign: 'right'}}>
                     <label htmlFor="username" style={{color: 'green'}}> USER NAME: </label>
                     <input type="text" placeholder="Username" name="username" value={this.props.userNameValue}/> <br></br>
                     <label htmlFor="password" name="password" style={{color: 'green'}}>PASSWORD: </label>
@@ -61,8 +60,8 @@ class Login extends Component {
                       value={this.props.userPassword}/> <br></br>
                     <br></br>
                     <p id='line' style={{marginTop: '0px'}} >_______________________________________</p>
-                    <button id='demo' type="button" onClick={this.props.handleDemo}>Back to Login</button>
-                    <button id='submit' type="submit">Sign In</button>
+                    <button id='demo' type="button" onClick={this.handleSignUp}>Back to Login</button>
+                    <button id='submit' type="submit">Create Account</button>
                 </form>
                 {/*<div style={{textAlign: "center"}}>
                 {this.props.highScoreToggle == false ? <button onClick={this.props.handleClick}>High Scores</button>
