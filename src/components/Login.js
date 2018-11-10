@@ -31,7 +31,11 @@ class Login extends Component {
           <div>
           {this.state.signUp === false ?
             <div class='login'>
-                <h1 style={{color: "red", textAlign: "center", marginTop: '20px', marginBottom: '20px'}}>Please Sign In</h1>
+                <h1 style={{color: "red", textAlign: "center", marginTop: '0px', paddingTop: '15px'}}>
+
+                  Please Sign In
+
+                </h1>
                 <form onSubmit={this.props.handleSubmit} onChange={this.props.handleChange} style={{textAlign: 'right'}}>
 
                     <label htmlFor="username" style={{color: 'green'}}> USER NAME: </label>
@@ -51,7 +55,7 @@ class Login extends Component {
                 </div>*/}
             </div> :
             <div class='login'>
-                <h1 style={{color: "red", textAlign: "center", marginTop: '20px', marginBottom: '20px'}}>Please Create Your Account</h1>
+                <h1 style={{color: "red", textAlign: "center", marginTop: '0px', paddingTop: '15px'}}>Please Create Your Account</h1>
                 <form onSubmit={this.props.handleCreateAccount} onChange={this.props.handleChange} id='create' style={{textAlign: 'right'}}>
                     <label htmlFor="username" style={{color: 'green'}}> USER NAME: </label>
                     <input type="text" placeholder="Username" name="username" value={this.props.userNameValue}/> <br></br>

@@ -14,10 +14,10 @@ class HighScore extends Component {
 
 
         return (
-            <div style={{position: 'absolute', top: '10%', boxSizing: 'border-box', color:'cyan', padding: '5px',
-              border: 'solid #5B6DCD 10px', width:'500px', textAlign: 'center'
+            <div style={{position: 'absolute', top: '5%', boxSizing: 'border-box', color:'cyan', padding: '5px',
+              border: 'solid #5B6DCD 10px', width:'500px', textAlign: 'center', fontSize: '15px', height: '20%', overflow: 'scroll'
             }}>
-                High Scores:
+                <p style={{fontSize: '17px', fontWeight: 'bold'}}>High Scores: </p>
                 {this.filterScores()}
             </div>
         );

@@ -104,9 +104,10 @@ class App extends Component {
     this.setState({
       userNameValue: "DEMO",
       userPassword: 'PASSWORD'
+    }, () => {
+      this.handleSubmit(event)
     })
 
-    this.handleSubmit(event);
   }
 
   handleSubmit = (event) => {
