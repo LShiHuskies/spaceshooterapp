@@ -130,7 +130,7 @@ class World extends Component {
                     )
                         {
                     this.gameOver();
-                    return this.props.currentUser
+                    return this.props.currentUser;
                     }
                     else if (
                         ((this.state.currentPosition.top < this.state.obstacleCoordinate.top +100
@@ -151,7 +151,7 @@ class World extends Component {
                     )
                         {
                     this.gameOver();
-                    return this.props.currentUser
+                    return this.props.currentUser;
                     }
 
                 })
@@ -195,7 +195,7 @@ class World extends Component {
                         (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 == true) )
                     ) {
                         this.gameOver();
-                        return this.props.currentUser
+                        return this.props.currentUser;
                     }
                     else if (
                         ((this.state.currentPosition.top < this.state.obstacleCoordinate.top +100
@@ -204,7 +204,7 @@ class World extends Component {
                         (this.state.currentPosition.left > this.state.obstacleCoordinate.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate.left + 125)
                                                         &&
-                        (this.state.obstacleSize === 10 && this.state.obstacleAppearance == true))
+                        (this.state.obstacleSize === 10 && this.state.obstacleAppearance === true))
                                                         ||
                         ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +100
                             && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
@@ -212,10 +212,10 @@ class World extends Component {
                             (this.state.currentPosition.left > this.state.obstacleCoordinate2.left
                             && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 125)
                                                             &&
-                            (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 == true) )
+                            (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 === true) )
                     ) {
                         this.gameOver();
-                        return this.props.currentUser
+                        return this.props.currentUser;
                     }
 
                 })
@@ -269,7 +269,7 @@ class World extends Component {
                         (this.state.currentPosition.left > this.state.obstacleCoordinate.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate.left + 125)
                                                         &&
-                        (this.state.obstacleSize === 10 && this.state.obstacleAppearance == true))
+                        (this.state.obstacleSize === 10 && this.state.obstacleAppearance === true))
                                                         ||
                         (this.state.currentPosition.top < this.state.obstacleCoordinate2.top +100
                         && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
@@ -277,11 +277,11 @@ class World extends Component {
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 125)
                                                         &&
-                        (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 == true)
+                        (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 === true)
                     )
                         {
                     this.gameOver();
-                    return this.props.currentUser
+                    return this.props.currentUser;
                     }
 
                 })
@@ -326,7 +326,7 @@ class World extends Component {
                         )
                     {
                         this.gameOver();
-                        return this.props.currentUser
+                        return this.props.currentUser;
                 }
                     else if (
                         ((this.state.currentPosition.top < this.state.obstacleCoordinate.top +100
@@ -347,7 +347,7 @@ class World extends Component {
                     )
                         {
                     this.gameOver();
-                    return this.props.currentUser
+                    return this.props.currentUser;
                     }
 
                 })
@@ -422,7 +422,8 @@ class World extends Component {
                             ((this.state.attackPosition.top < this.state.obstacleCoordinate.top + 110
                             && this.state.attackPosition.top > this.state.obstacleCoordinate.top - 110)
                             ) && (this.state.attackPosition.left > this.state.obstacleCoordinate.left -20
-                                && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 100) && (this.state.obstacleSize == 10)
+                                && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 100)
+                                && (this.state.obstacleSize === 10)
                             ) //entire else if (obs-size == 10)
                         {
                             clearInterval(upwardProjectile)
@@ -445,7 +446,7 @@ class World extends Component {
                         && this.state.attackPosition.top > this.state.obstacleCoordinate2.top - 110)
                         ) && (this.state.attackPosition.left > this.state.obstacleCoordinate2.left -20
                             && this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 100)
-                             && (this.state.obstacleSize2 == 10)
+                             && (this.state.obstacleSize2 === 10)
                         ) //entire else if (obs-size2 == 10)
                     {
                         clearInterval(upwardProjectile)
