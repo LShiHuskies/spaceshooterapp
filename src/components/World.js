@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Ship from './Ship'
-import keydown from 'react-keydown'
-import Obstacle from './Obstacle'
-import Obstacle2 from './Obstacle2'
-import Score from './Score'
-import explosion from '../assets/explosion.gif'
-import Soundtrack from "../assets/Soundtrack.mp3"
-import explosionSound from "../assets/explosionSound.mp3"
-import shootingSound from "../assets/shootingSound.wav"
-import GameOver from './GameOver'
-
+import Ship from './Ship';
+import keydown from 'react-keydown';
+import Obstacle from './Obstacle';
+import Obstacle2 from './Obstacle2';
+import Score from './Score';
+import explosion from '../assets/explosion.gif';
+import Soundtrack from "../assets/Soundtrack.mp3";
+import explosionSound from "../assets/explosionSound.mp3";
+import shootingSound from "../assets/shootingSound.wav";
+import GameOver from './GameOver';
+import '../App.css';
 // Acceleration for Ship (Accessed inside handleControls)
 var upwardAcceleration = []
 var downwardAcceleration = []
@@ -34,7 +34,9 @@ shootingSoundEffect.src = `${shootingSound}`
 shootingSoundEffect.setAttribute("preload", "auto");
 shootingSoundEffect.setAttribute("controls", "none");
 shootingSoundEffect.style.display = "none";
-shootingSoundEffect.volume = .05
+shootingSoundEffect.volume = .05;
+
+let explosionCount = 0;
 
 class World extends Component {
     state = {
@@ -76,7 +78,7 @@ class World extends Component {
 
     componentDidMount() {
         window.addEventListener("keydown", this.handleControls)
-        
+
         var obstacleLocation =
             setInterval( () => {
                 this.setState({
@@ -151,7 +153,7 @@ class World extends Component {
                     this.gameOver();
                     return this.props.currentUser
                     }
-                
+
                 })
             }
         }, 100)
@@ -177,16 +179,16 @@ class World extends Component {
                 }, () => {
                     if (
                         ((this.state.currentPosition.top < this.state.obstacleCoordinate.top +220
-                        && this.state.currentPosition.top > this.state.obstacleCoordinate.top) 
+                        && this.state.currentPosition.top > this.state.obstacleCoordinate.top)
                                                         &&
                         (this.state.currentPosition.left > this.state.obstacleCoordinate.left
-                        && this.state.currentPosition.left < this.state.obstacleCoordinate.left + 230) 
+                        && this.state.currentPosition.left < this.state.obstacleCoordinate.left + 230)
                                                         &&
                         (this.state.obstacleSize === 20 && this.state.obstacleAppearance == true))
                                                         ||
                         ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +220
                         && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
-                                                        && 
+                                                        &&
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 230)
                                                         &&
@@ -206,7 +208,7 @@ class World extends Component {
                                                         ||
                         ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +100
                             && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
-                                                            && 
+                                                            &&
                             (this.state.currentPosition.left > this.state.obstacleCoordinate2.left
                             && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 125)
                                                             &&
@@ -215,7 +217,7 @@ class World extends Component {
                         this.gameOver();
                         return this.props.currentUser
                     }
-            
+
                 })
             }
         }, 100)
@@ -254,7 +256,7 @@ class World extends Component {
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left +20
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 230)
                                                         &&
-                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 === true)                                                            
+                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 === true)
                     )
                         {
                     this.gameOver();
@@ -281,7 +283,7 @@ class World extends Component {
                     this.gameOver();
                     return this.props.currentUser
                     }
-                
+
                 })
             }
         }, 100)
@@ -347,7 +349,7 @@ class World extends Component {
                     this.gameOver();
                     return this.props.currentUser
                     }
-                
+
                 })
             }
         }, 100)
@@ -497,10 +499,10 @@ class World extends Component {
                     } //end of callback if statement
                     //firing obstacle 1 at size 20
                     else if (
-                        (this.state.attackPosition.top < this.state.obstacleCoordinate.top + 10 
+                        (this.state.attackPosition.top < this.state.obstacleCoordinate.top + 10
                         && this.state.attackPosition.top > this.state.obstacleCoordinate.top -10 )
                         && (this.state.attackPosition.left > this.state.obstacleCoordinate.left
-                        && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 205) 
+                        && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 205)
                         && (this.state.obstacleSize == 20)
                     ) //entire else if (obs-size == 20)
                     {
@@ -518,10 +520,10 @@ class World extends Component {
                     }
                     //firing obstacle 2 at size 20
                     else if (
-                        (this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 10 
+                        (this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 10
                         && this.state.attackPosition.top > this.state.obstacleCoordinate2.top -10 )
                         && (this.state.attackPosition.left > this.state.obstacleCoordinate2.left
-                        && this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 205) 
+                        && this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 205)
                         && (this.state.obstacleSize2 == 20)
                     ) //entire else if (obs-size2 == 20)
                     {
@@ -539,7 +541,7 @@ class World extends Component {
                     }
                     // firing obstacle 1 at size 10
                     else if (
-                        (this.state.attackPosition.top < this.state.obstacleCoordinate.top + 5 
+                        (this.state.attackPosition.top < this.state.obstacleCoordinate.top + 5
                             && this.state.attackPosition.top > this.state.obstacleCoordinate.top -5 )
                          && (this.state.attackPosition.left > this.state.obstacleCoordinate.left -20
                             && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 100) && (this.state.obstacleSize == 10)
@@ -561,10 +563,10 @@ class World extends Component {
                         }
                         // firing obstacle 2 at size 10
                     else if (
-                        (this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 5 
+                        (this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 5
                             && this.state.attackPosition.top > this.state.obstacleCoordinate2.top -5 )
                          && (this.state.attackPosition.left > this.state.obstacleCoordinate2.left -20
-                            && this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 100) 
+                            && this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 100)
                             && (this.state.obstacleSize2 == 10)
                         ) //entire else if (obs-size2 == 10)
                         {
@@ -619,10 +621,10 @@ class World extends Component {
                         } //end of callback if statement
                     //firing Obstacle 1 at size 20
                     else if (
-                        (this.state.attackPosition.left < this.state.obstacleCoordinate.left + 10 
-                        && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 10) 
+                        (this.state.attackPosition.left < this.state.obstacleCoordinate.left + 10
+                        && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 10)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate.top
-                        && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 215) 
+                        && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 215)
                         && (this.state.obstacleSize == 20)
                         ) //entire else if (obs-size == 20)
                         {
@@ -640,10 +642,10 @@ class World extends Component {
                         }
                         //firing Obstacle 2 at size 20
                         else if (
-                            (this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 10 
-                            && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 10) 
+                            (this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 10
+                            && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 10)
                             && (this.state.attackPosition.top > this.state.obstacleCoordinate2.top
-                            && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 215) 
+                            && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 215)
                             && (this.state.obstacleSize2 == 20)
                             ) //entire else if (obs-size == 20)
                             {
@@ -661,10 +663,10 @@ class World extends Component {
                             }
                     //firing Obstacle 1 at size 10
                     else if (
-                        (this.state.attackPosition.left < this.state.obstacleCoordinate.left + 5 
-                        && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 5)  
+                        (this.state.attackPosition.left < this.state.obstacleCoordinate.left + 5
+                        && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 5)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate.top -10
-                        && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 100) 
+                        && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 100)
                         && (this.state.obstacleSize == 10)
                         ) //entire else if (obs-size == 10)
                         {
@@ -684,10 +686,10 @@ class World extends Component {
                         }
                     //firing Obstacle 2 at size 10
                     else if (
-                        (this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 5 
-                        && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 5)  
+                        (this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 5
+                        && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 5)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate2.top -10
-                        && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 100) 
+                        && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 100)
                         && (this.state.obstacleSize2 == 10)
                         ) //entire else if (obs-size == 10)
                         {
@@ -743,9 +745,9 @@ class World extends Component {
                     // firing obstacle 1 at size 20
                     else if (
                         (this.state.attackPosition.left < this.state.obstacleCoordinate.left + 210
-                        && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 210) 
+                        && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 210)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate.top
-                        && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 215) 
+                        && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 215)
                         && (this.state.obstacleSize == 20)
                         ) //entire else if (obs-size == 20)
                         {
@@ -764,9 +766,9 @@ class World extends Component {
                     //firing obstacle 2 at size 20
                     else if (
                         (this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 210
-                        && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 210) 
+                        && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 210)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate2.top
-                        && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 215) 
+                        && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 215)
                         && (this.state.obstacleSize2 == 20)
                         ) //entire else if (obs-size2 == 20)
                         {
@@ -782,12 +784,12 @@ class World extends Component {
                                 gameScore: this.state.gameScore + 200,
                             })
                         }
-                    //firing obstacle 1 at size 10    
+                    //firing obstacle 1 at size 10
                     else if (
                         (this.state.attackPosition.left < this.state.obstacleCoordinate.left + 105
-                        && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 105)  
+                        && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 105)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate.top
-                        && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 100) 
+                        && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 100)
                         && (this.state.obstacleSize == 10)
                         ) //entire else if (obs-size == 10)
                         {
@@ -805,12 +807,12 @@ class World extends Component {
                                 this.reRenderObstacle()
                             })
                         }
-                    //firing obstacle 1 at size 10                                   
+                    //firing obstacle 1 at size 10
                     else if (
                         (this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 105
-                        && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 105)  
+                        && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 105)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate2.top
-                        && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 100) 
+                        && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 100)
                         && (this.state.obstacleSize2 == 10)
                         ) //entire else if (obs-size2 == 10)
                         {
@@ -829,7 +831,7 @@ class World extends Component {
                             })
                         }
                 } // end of callback function
-            ) // end of sst in setInterval 
+            ) // end of sst in setInterval
         }, 10) // end of setInt
                 this.setState({
                     attack: true,
@@ -849,7 +851,7 @@ class World extends Component {
             this.setState({
                 obstacleCoordinate: {
                     top: -100,
-                    left: this.state.obstacleCoordinate.left 
+                    left: this.state.obstacleCoordinate.left
                 }
             })
         }
@@ -857,7 +859,7 @@ class World extends Component {
             this.setState({
                 obstacleCoordinate: {
                     top: window.innerHeight,
-                    left: this.state.obstacleCoordinate.left 
+                    left: this.state.obstacleCoordinate.left
                 }
             })
         }
@@ -865,7 +867,7 @@ class World extends Component {
             this.setState({
                 obstacleCoordinate: {
                     top: this.state.obstacleCoordinate.top,
-                    left: 0 
+                    left: 0
                 }
             })
         }
@@ -873,7 +875,7 @@ class World extends Component {
             this.setState({
                 obstacleCoordinate: {
                     top: this.state.obstacleCoordinate.top,
-                    left: window.innerWidth, 
+                    left: window.innerWidth,
                 }
             })
         }
@@ -882,7 +884,7 @@ class World extends Component {
             this.setState({
                 obstacleCoordinate2: {
                     top: -100,
-                    left: this.state.obstacleCoordinate2.left 
+                    left: this.state.obstacleCoordinate2.left
                 }
             })
         }
@@ -890,7 +892,7 @@ class World extends Component {
             this.setState({
                 obstacleCoordinate2: {
                     top: window.innerHeight,
-                    left: this.state.obstacleCoordinate2.left 
+                    left: this.state.obstacleCoordinate2.left
                 }
             })
         }
@@ -898,7 +900,7 @@ class World extends Component {
             this.setState({
                 obstacleCoordinate2: {
                     top: this.state.obstacleCoordinate2.top,
-                    left: 0 
+                    left: 0
                 }
             })
         }
@@ -906,7 +908,7 @@ class World extends Component {
             this.setState({
                 obstacleCoordinate2: {
                     top: this.state.obstacleCoordinate2.top,
-                    left: window.innerWidth, 
+                    left: window.innerWidth,
                 }
             })
         }
@@ -916,14 +918,14 @@ class World extends Component {
         let speedConstant = (this.state.obstacleSpeed) + (this.state.gameScore/1000)
         let randomX = Math.random() * window.innerWidth/1.5;
         let randomY = Math.random() * window.innerHeight/2;
-        if ((randomX < this.state.currentPosition.left + 250 
+        if ((randomX < this.state.currentPosition.left + 250
             && randomX > this.state.currentPosition.left - 250)
-            && (randomY < this.state.currentPosition.top + 250 
+            && (randomY < this.state.currentPosition.top + 250
             && randomY > this.state.currentPosition.top - 250)
             ){
                 randomX = 0
                 randomY = 0
-            }  
+            }
 
              (setTimeout( () => {
                 this.setState({
@@ -937,19 +939,19 @@ class World extends Component {
                 })
             }, 2000))
     }
-    
+
     reRenderObstacle2 = () => {
         let speedConstant = (this.state.obstacleSpeed) + (this.state.gameScore/1000)
         let randomX = Math.random() * window.innerWidth/1.5;
         let randomY = Math.random() * window.innerHeight/2;
-        if ((randomX < this.state.currentPosition.left + 250 
+        if ((randomX < this.state.currentPosition.left + 250
             && randomX > this.state.currentPosition.left - 250)
-            && (randomY < this.state.currentPosition.top + 250 
+            && (randomY < this.state.currentPosition.top + 250
             && randomY > this.state.currentPosition.top - 250)
             ){
                 randomX = 500
                 randomY = 400
-            }      
+            }
              (setTimeout( () => {
                 this.setState({
                     obstacleSpeed: speedConstant,
@@ -960,7 +962,7 @@ class World extends Component {
                         left: randomX
                     }
                 })
-            }, 2000))  
+            }, 2000))
     }
 
     decelerate = (direction) => {
@@ -1060,7 +1062,10 @@ class World extends Component {
                     gameActive: false
                 }, () => {
                   gameBackgroundMusic.remove();
-                  explosionSoundEffect.play()
+                  if (explosionCount === 0) {
+                    explosionSoundEffect.play();
+                    explosionCount++;
+                  }
                 });
               const body = {
                   score: this.state.gameScore,
@@ -1076,20 +1081,20 @@ class World extends Component {
                   }
               if (this.state.shipStatus < 2){
                 fetch('https://space-shooter-api.herokuapp.com/games', config).then(r => r.json()).then(console.log)
-              } 
+              }
             }
           })
-          
+
       }
 
     render() {
         return (
-            <div>
+            <div id='world'>
             <Ship shipSrc={this.state.shipSrc} attackDirection={this.state.attackDirection} attackPosition={this.state.attackPosition} currentPosition={this.state.currentPosition} currentDirection={this.state.currentDirection} handleControls={this.handleControls} attack={this.state.attack}/>
-            {this.state.obstacleAppearance == true ? <Obstacle obstacleCoordinate={this.state.obstacleCoordinate} obstacleSize={this.state.obstacleSize}/> : null}
-            {this.state.obstacleAppearance2 == true ? <Obstacle2 obstacleCoordinate2={this.state.obstacleCoordinate2} obstacleSize2={this.state.obstacleSize2}/> : null}
+            {this.state.obstacleAppearance === true ? <Obstacle obstacleCoordinate={this.state.obstacleCoordinate} obstacleSize={this.state.obstacleSize}/> : null}
+            {this.state.obstacleAppearance2 === true ? <Obstacle2 obstacleCoordinate2={this.state.obstacleCoordinate2} obstacleSize2={this.state.obstacleSize2}/> : null}
             <Score gameScore={this.state.gameScore}/>
-            {this.state.gameActive == false ? <GameOver gameScore={this.state.gameScore}/> : null}
+            {this.state.gameActive === false ? <GameOver gameScore={this.state.gameScore}/> : null}
             </div>
         );
     }
