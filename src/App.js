@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import World from './components/World'
-import Login from './components/Login'
+import World from './components/World';
+import Login from './components/Login';
+import NotFound from './components/NotFound';
 
 let userArray = []
 let allGames = []
@@ -21,6 +22,7 @@ class App extends Component {
    infoArray: [],
    scoreFilter: [],
    highScoreToggle: false,
+   notFound: false
  }
 
   handleChange = (event) => {
@@ -47,6 +49,12 @@ class App extends Component {
 
   }
 
+  handleCondition = () => {
+    setTimeout(() => this.setState({
+      notFound: false
+    }), 7000)
+  }
+
 
   filterGames = (data) => {
     if (this.state.currentGames.length === 0){
@@ -54,7 +62,7 @@ class App extends Component {
       currentGames: data,
       highScoreToggle: true,
     })
-    this.state.allUsers.map(user => this.state.currentGames.filter(game => {if (game.user_id == user.id){
+    this.state.allUsers.map(user => this.state.currentGames.filter(game => {if (game.user_id === user.id){
       let userInstance = user.username
       let gameScore = game.score
 
@@ -95,7 +103,9 @@ class App extends Component {
       })
     }
     else {
-      alert("You're information is not in the database, would you like to create a new account?");
+      this.setState({
+        notFound: true
+      }, () => this.handleCondition())
     }
 
   }
@@ -139,11 +149,15 @@ class App extends Component {
     return (
         <div class='App-header' style={{position: 'absolute', backgroundImage: 'url(https://www.macleans.ca/wp-content/uploads/2014/07/stars-carousel.jpg)',
           height: "100%", width: "100%"}}>
-          {this.state.loggedIn === false ? <Login highScoreToggle={this.state.highScoreToggle} scoreFilter={this.state.scoreFilter}
+          {this.state.loggedIn === false ?
+            <React.Fragment>
+            <Login highScoreToggle={this.state.highScoreToggle} scoreFilter={this.state.scoreFilter}
           handleClick={this.handleClick} handleDemo={this.handleDemo} handleCreateAccount={this.handleCreateAccount}
           userNameValue={this.state.userNameValue} handleSubmit={this.handleSubmit} handleChange={this.handleChange}
           userPassword={this.state.userPassword}
           />
+        {this.state.notFound === true ? <NotFound /> : null}
+          </React.Fragment>
         : <World currentUser={this.state.currentUser}/>}
         </div>
     );
