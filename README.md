@@ -20,11 +20,12 @@ A user can create a new account and log in. If a user does not create an account
 2. Navigate to the GitHub for the [SpaceShip Shooter Api](https://github.com/LShiHuskies/space-shooter-api).
 3. Fork and clone the back-end api repository.
 4. Navigate to the file directory from your terminal for the back-end.
-4. Run rails start and you should be prompted to http://localhost:3000/. (Make sure the back-end api is running on http://localhost:3000/)
-5. Navigate to the file directory for the front-end, and run PORT=4000 npm start and you should be prompted to http://localhost:4000/.
-6. To start with a Demo account play, just click on Demo and you can simply start.
-6. For a quick tutorial of the App: [SpaceShip Shooter App](https://www.youtube.com/watch?v=uyQVa7hhAwQ).
-7. To play live on Heroku on the Web, simply navigate to [SpaceShip Shooter Heroku](https://blooming-garden-39476.herokuapp.com/).
+5. Make sure to run bundle install, rake db:migrate, and rake db:seed.
+6. Run rails start and you should be prompted to http://localhost:3000/. (Make sure the back-end api is running on http://localhost:3000/)
+7. Navigate to the file directory for the front-end, and run PORT=4000 npm start and you should be prompted to http://localhost:4000/.
+8. To start with a Demo account play, just click on Demo and you can simply start.
+9. For a quick tutorial of the App: [SpaceShip Shooter App](https://www.youtube.com/watch?v=uyQVa7hhAwQ).
+10. To play live on Heroku on the Web, simply navigate to [SpaceShip Shooter Heroku](https://blooming-garden-39476.herokuapp.com/).
 
 # ScreenShots of Game In Action
 <div display="inline">
@@ -32,6 +33,8 @@ A user can create a new account and log in. If a user does not create an account
 
 <img width="425" alt="screen shot 2018-08-13 at 6 07 58 pm" src="https://user-images.githubusercontent.com/34640293/44060982-877e669a-9f24-11e8-8053-4bc2bf23739a.png">
 </div>
+
+<img width="425" alt="screen shot 2018-11-10 at 10 10 34 pm" src="https://user-images.githubusercontent.com/34640293/48308591-a7bd5d00-e536-11e8-9bc9-9f369434c65e.png">
 
 # Heroku App Deployment
 Please be advised that the Heroku branch is on the branch called Heroku where if you want to only fork and clone the front end, you can simply switch over to the heroku branch.
