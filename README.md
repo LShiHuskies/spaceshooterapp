@@ -17,11 +17,13 @@ A user can create a new account and log in. If a user does not create an account
 # Direction on how to run and start the program
 
 1. Fork and clone this repository to your local environment.
-2. Navigate to the file directory from your terminal.
-3. Since the backend api is hosted on the web on 'https://space-shooter-api.herokuapp.com', there is no need to fork and clone the backend api.
-4. Run npm start and you should be prompted to http://localhost:3000/
-5. For a quick demo, simply click submit and the game will start.
-6. For a quick tutorial of the App: [SpaceShip Shooter App](https://youtu.be/Mn6nAQIv57g).
+2. Navigate to the GitHub for the [SpaceShip Shooter Api](https://github.com/LShiHuskies/space-shooter-api).
+3. Fork and clone the back-end api repository.
+4. Navigate to the file directory from your terminal for the back-end.
+4. Run rails start and you should be prompted to http://localhost:3000/. (Make sure the back-end api is running on http://localhost:3000/)
+5. Navigate to the file directory for the front-end, and run PORT=4000 npm start and you should be prompted to http://localhost:4000/.
+6. To start with a Demo account play, just click on Demo and you can simply start.
+6. For a quick tutorial of the App: [SpaceShip Shooter App](https://www.youtube.com/watch?v=uyQVa7hhAwQ).
 7. To play live on Heroku on the Web, simply navigate to [SpaceShip Shooter Heroku](https://blooming-garden-39476.herokuapp.com/).
 
 # ScreenShots of Game In Action
@@ -30,6 +32,11 @@ A user can create a new account and log in. If a user does not create an account
 
 <img width="425" alt="screen shot 2018-08-13 at 6 07 58 pm" src="https://user-images.githubusercontent.com/34640293/44060982-877e669a-9f24-11e8-8053-4bc2bf23739a.png">
 </div>
+
+# Heroku App Deployment
+Please be advised that the Heroku branch is on the branch called Heroku where if you want to only fork and clone the front end, you can simply switch over to the heroku branch.
+Since the backend api is hosted on the web on 'https://space-shooter-api.herokuapp.com',
+there is no need to fork and clone the backend api.
 
 # Credits
 
