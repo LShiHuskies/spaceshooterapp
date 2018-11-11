@@ -42,7 +42,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://space-shooter-api.herokuapp.com/users").then(r => r.json()).then(data => this.setState({
+    fetch(`http://${window.location.hostname}:3000/users`).then(r => r.json()).then(data => this.setState({
       allUsers: data
     })
     )
@@ -89,7 +89,7 @@ class App extends Component {
   }
 
   handleClick = (event) => {
-    fetch("https://space-shooter-api.herokuapp.com/games").then(r => r.json()).then(data => this.filterGames(data))
+    fetch(`http://${window.location.hostname}:3000/games`).then(r => r.json()).then(data => this.filterGames(data))
 
   }
 
@@ -122,7 +122,7 @@ class App extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    fetch("https://space-shooter-api.herokuapp.com/users").then(r=> r.json()).then(data => this.getUsers(data));
+    fetch(`http://${window.location.hostname}:3000/users`).then(r=> r.json()).then(data => this.getUsers(data));
   }
 
   handleCreateAccount = (event) => {
@@ -139,7 +139,7 @@ class App extends Component {
             },
     body:JSON.stringify(body)
     }
-    fetch("https://space-shooter-api.herokuapp.com/users", config).then(r => r.json()).then(data => this.setState({loggedIn: true, currentUser: data}))
+    fetch(`http://${window.location.hostname}:3000/users`, config).then(r => r.json()).then(data => this.setState({loggedIn: true, currentUser: data}))
   }
 
 
