@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Ship from './Ship';
-import keydown from 'react-keydown';
 import Obstacle from './Obstacle';
 import Obstacle2 from './Obstacle2';
 import Score from './Score';
