@@ -4,10 +4,7 @@ import World from './components/World';
 import Login from './components/Login';
 import NotFound from './components/NotFound';
 
-let userArray = []
-let allGames = []
-let gameArray = []
-let userMatch = []
+let userArray = [];
 
 
 class App extends Component {
@@ -61,13 +58,14 @@ class App extends Component {
       currentGames: data,
       highScoreToggle: true,
     })
-    this.state.allUsers.map(user => this.state.currentGames.filter(game => {if (game.user_id === user.id){
-      let userInstance = user.username
-      let gameScore = game.score
+    this.state.allUsers.map(user => this.state.currentGames.filter(game => {
+      if (game.user_id === user.id){
+        let userInstance = user.username
+        let gameScore = game.score
 
-      this.setState({
-        infoArray: [...this.state.infoArray, {user : userInstance, score :gameScore}]
-      })
+        this.setState({
+          infoArray: [...this.state.infoArray, {user : userInstance, score :gameScore}]
+        })
     }
     }))
     let scores = this.state.infoArray.sort (function (d, e) {

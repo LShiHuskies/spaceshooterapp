@@ -5,7 +5,7 @@ class Ship extends Component {
     render() {
         return (
             <div>
-                <img src={this.props.shipSrc}
+                <img src={this.props.shipSrc} alt="ship"
                 style={{
                     position:"absolute",
                     left: `${this.props.currentPosition.left}px`,

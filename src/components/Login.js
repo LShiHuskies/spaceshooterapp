@@ -77,8 +77,8 @@ class Login extends Component {
           {this.state.signUp === false ?
           <div style={{fontSize: '14px', padding: '7px',
            color: '#ffffff', width: '300px', fontHeight: 'normal', fontStretch: 'normal',
-          lineHeight: 'normal', letterSpacing: '-0.2px', textAlign: 'right',
-          display: 'inline', position: 'absolute', float: 'left', top: '1.5%', display: 'inline', right: '5%'}}>
+          lineHeight: 'normal', letterSpacing: '-0.2px', textAlign: 'right', position: 'absolute',
+          float: 'left', top: '1.5%', display: 'inline', right: '5%'}}>
           <div style={{display: 'inline', position: 'absolute', top: '100%', left: '0%', right: '40%'}}>Need to Create an Account?</div>
             <button id='SIGNUP' type="submit" onClick={this.handleSignUp} style={{display: 'inline',
                 color: 'white',
@@ -87,7 +87,7 @@ class Login extends Component {
            <div style={{fontSize: '14px', padding: '7px',
             color: '#ffffff', width: '300px', fontHeight: 'normal', fontStretch: 'normal',
            lineHeight: 'normal', letterSpacing: '-0.2px', textAlign: 'right',
-           display: 'inline', position: 'absolute', float: 'left', top: '1.5%', display: 'inline', right: '5%'}}>
+           display: 'inline', position: 'absolute', float: 'left', top: '1.5%', right: '5%'}}>
            <div style={{display: 'inline', position: 'absolute', top: '100%', left: '0%', right: '40%'}}>Already have an Account?</div>
              <button id='SIGNUP' type="submit" onClick={this.handleSignUp} style={{display: 'inline',
                  color: 'white',

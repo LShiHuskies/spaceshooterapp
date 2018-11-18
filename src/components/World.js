@@ -1047,6 +1047,9 @@ class World extends Component {
             console.log("hitting this")
         }
         break;
+
+        default:
+          console.log('here')
         }
     }
 
