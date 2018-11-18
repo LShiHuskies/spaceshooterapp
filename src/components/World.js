@@ -119,13 +119,13 @@ class World extends Component {
                                                         &&
                         (this.state.obstacleSize === 20 && this.state.obstacleAppearance === true))
                                                         ||
-                        (this.state.currentPosition.top < this.state.obstacleCoordinate2.top +220
+                        ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +220
                         && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
                                                         &&
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left +20
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 230)
                                                         &&
-                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 === true)
+                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 === true))
                     )
                         {
                     this.gameOver();
@@ -138,15 +138,15 @@ class World extends Component {
                         (this.state.currentPosition.left > this.state.obstacleCoordinate.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate.left + 125)
                                                         &&
-                        (this.state.obstacleSize === 10 && this.state.obstacleAppearance == true))
+                        (this.state.obstacleSize === 10 && this.state.obstacleAppearance === true))
                                                         ||
-                        (this.state.currentPosition.top < this.state.obstacleCoordinate2.top +100
+                        ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +100
                         && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
                                                         &&
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 125)
                                                         &&
-                        (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 == true)
+                        (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 === true))
                     )
                         {
                     this.gameOver();
@@ -183,7 +183,7 @@ class World extends Component {
                         (this.state.currentPosition.left > this.state.obstacleCoordinate.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate.left + 230)
                                                         &&
-                        (this.state.obstacleSize === 20 && this.state.obstacleAppearance == true))
+                        (this.state.obstacleSize === 20 && this.state.obstacleAppearance === true))
                                                         ||
                         ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +220
                         && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
@@ -191,7 +191,7 @@ class World extends Component {
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 230)
                                                         &&
-                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 == true) )
+                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 === true) )
                     ) {
                         this.gameOver();
                         return this.props.currentUser;
@@ -249,13 +249,13 @@ class World extends Component {
                                                         &&
                         (this.state.obstacleSize === 20 && this.state.obstacleAppearance === true))
                                                         ||
-                        (this.state.currentPosition.top < this.state.obstacleCoordinate2.top +220
+                        ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +220
                         && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
                                                         &&
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left +20
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 230)
                                                         &&
-                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 === true)
+                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 === true))
                     )
                         {
                     this.gameOver();
@@ -270,13 +270,13 @@ class World extends Component {
                                                         &&
                         (this.state.obstacleSize === 10 && this.state.obstacleAppearance === true))
                                                         ||
-                        (this.state.currentPosition.top < this.state.obstacleCoordinate2.top +100
+                        ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +100
                         && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
                                                         &&
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 125)
                                                         &&
-                        (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 === true)
+                        (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 === true))
                     )
                         {
                     this.gameOver();
@@ -315,13 +315,13 @@ class World extends Component {
                                                         &&
                         (this.state.obstacleSize === 20 && this.state.obstacleAppearance === true))
                                                         ||
-                        (this.state.currentPosition.top < this.state.obstacleCoordinate2.top +220
+                        ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +220
                         && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
                                                         &&
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left +20
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 230)
                                                         &&
-                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 === true)
+                        (this.state.obstacleSize2 === 20 && this.state.obstacleAppearance2 === true))
                         )
                     {
                         this.gameOver();
@@ -334,15 +334,15 @@ class World extends Component {
                         (this.state.currentPosition.left > this.state.obstacleCoordinate.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate.left + 125)
                                                         &&
-                        (this.state.obstacleSize === 10 && this.state.obstacleAppearance == true))
+                        (this.state.obstacleSize === 10 && this.state.obstacleAppearance === true))
                                                         ||
-                        (this.state.currentPosition.top < this.state.obstacleCoordinate2.top +100
+                        ((this.state.currentPosition.top < this.state.obstacleCoordinate2.top +100
                         && this.state.currentPosition.top > this.state.obstacleCoordinate2.top)
                                                         &&
                         (this.state.currentPosition.left > this.state.obstacleCoordinate2.left
                         && this.state.currentPosition.left < this.state.obstacleCoordinate2.left + 125)
                                                         &&
-                        (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 == true)
+                        (this.state.obstacleSize2 === 10 && this.state.obstacleAppearance2 === true))
                     )
                         {
                     this.gameOver();
@@ -380,7 +380,8 @@ class World extends Component {
                             ((this.state.attackPosition.top < this.state.obstacleCoordinate.top + 220
                               && this.state.attackPosition.top > this.state.obstacleCoordinate.top - 220)
                             ) && (this.state.attackPosition.left > this.state.obstacleCoordinate.left
-                            && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 340) && (this.state.obstacleSize == 20)
+                            && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 340)
+                            && (this.state.obstacleSize === 20)
                         ) //entire else if (obs-size == 20)
                         {
                             clearInterval(upwardProjectile)
@@ -401,7 +402,7 @@ class World extends Component {
                               && this.state.attackPosition.top > this.state.obstacleCoordinate2.top - 220)
                             ) && (this.state.attackPosition.left > this.state.obstacleCoordinate2.left
                             && this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 340)
-                             && (this.state.obstacleSize2 == 20)
+                             && (this.state.obstacleSize2 === 20)
                         ) //entire else if (obs-size2 == 20)
                         {
                             clearInterval(upwardProjectile)
@@ -473,7 +474,9 @@ class World extends Component {
                 top: this.state.currentPosition.top - 65
             }
         })
-            upwardProjectile
+
+            // upwardProjectile
+
         } // end of Ship-Up if statement
     }
 
@@ -503,7 +506,7 @@ class World extends Component {
                         && this.state.attackPosition.top > this.state.obstacleCoordinate.top -10 )
                         && (this.state.attackPosition.left > this.state.obstacleCoordinate.left
                         && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 205)
-                        && (this.state.obstacleSize == 20)
+                        && (this.state.obstacleSize === 20)
                     ) //entire else if (obs-size == 20)
                     {
                         clearInterval(downwardProjectile)
@@ -524,7 +527,7 @@ class World extends Component {
                         && this.state.attackPosition.top > this.state.obstacleCoordinate2.top -10 )
                         && (this.state.attackPosition.left > this.state.obstacleCoordinate2.left
                         && this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 205)
-                        && (this.state.obstacleSize2 == 20)
+                        && (this.state.obstacleSize2 === 20)
                     ) //entire else if (obs-size2 == 20)
                     {
                         clearInterval(downwardProjectile)
@@ -544,7 +547,8 @@ class World extends Component {
                         (this.state.attackPosition.top < this.state.obstacleCoordinate.top + 5
                             && this.state.attackPosition.top > this.state.obstacleCoordinate.top -5 )
                          && (this.state.attackPosition.left > this.state.obstacleCoordinate.left -20
-                            && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 100) && (this.state.obstacleSize == 10)
+                            && this.state.attackPosition.left < this.state.obstacleCoordinate.left + 100)
+                            && (this.state.obstacleSize === 10)
                         ) //entire else if (obs-size == 10)
                         {
                             clearInterval(downwardProjectile)
@@ -567,7 +571,7 @@ class World extends Component {
                             && this.state.attackPosition.top > this.state.obstacleCoordinate2.top -5 )
                          && (this.state.attackPosition.left > this.state.obstacleCoordinate2.left -20
                             && this.state.attackPosition.left < this.state.obstacleCoordinate2.left + 100)
-                            && (this.state.obstacleSize2 == 10)
+                            && (this.state.obstacleSize2 === 10)
                         ) //entire else if (obs-size2 == 10)
                         {
                             clearInterval(downwardProjectile)
@@ -595,7 +599,7 @@ class World extends Component {
                     top: this.state.currentPosition.top + 65
                 }
             })
-                downwardProjectile
+              //  downwardProjectile
             } // end of Fire Downward if statement
     }
 
@@ -625,7 +629,7 @@ class World extends Component {
                         && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 10)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate.top
                         && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 215)
-                        && (this.state.obstacleSize == 20)
+                        && (this.state.obstacleSize === 20)
                         ) //entire else if (obs-size == 20)
                         {
                         clearInterval(rightwardProjectile)
@@ -646,7 +650,7 @@ class World extends Component {
                             && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 10)
                             && (this.state.attackPosition.top > this.state.obstacleCoordinate2.top
                             && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 215)
-                            && (this.state.obstacleSize2 == 20)
+                            && (this.state.obstacleSize2 === 20)
                             ) //entire else if (obs-size == 20)
                             {
                             clearInterval(rightwardProjectile)
@@ -667,7 +671,7 @@ class World extends Component {
                         && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 5)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate.top -10
                         && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 100)
-                        && (this.state.obstacleSize == 10)
+                        && (this.state.obstacleSize === 10)
                         ) //entire else if (obs-size == 10)
                         {
                             clearInterval(rightwardProjectile)
@@ -690,7 +694,7 @@ class World extends Component {
                         && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 5)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate2.top -10
                         && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 100)
-                        && (this.state.obstacleSize2 == 10)
+                        && (this.state.obstacleSize2 === 10)
                         ) //entire else if (obs-size == 10)
                         {
                             clearInterval(rightwardProjectile)
@@ -718,7 +722,7 @@ class World extends Component {
                         top: this.state.currentPosition.top + 3
                     }
                 })
-                    rightwardProjectile
+                  //  rightwardProjectile
             } // end of Fire Right if statement
     }
 
@@ -748,7 +752,7 @@ class World extends Component {
                         && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 210)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate.top
                         && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 215)
-                        && (this.state.obstacleSize == 20)
+                        && (this.state.obstacleSize === 20)
                         ) //entire else if (obs-size == 20)
                         {
                             clearInterval(leftwardProjectile)
@@ -769,7 +773,7 @@ class World extends Component {
                         && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 210)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate2.top
                         && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 215)
-                        && (this.state.obstacleSize2 == 20)
+                        && (this.state.obstacleSize2 === 20)
                         ) //entire else if (obs-size2 == 20)
                         {
                             clearInterval(leftwardProjectile)
@@ -790,7 +794,7 @@ class World extends Component {
                         && this.state.attackPosition.left > this.state.obstacleCoordinate.left - 105)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate.top
                         && this.state.attackPosition.top < this.state.obstacleCoordinate.top + 100)
-                        && (this.state.obstacleSize == 10)
+                        && (this.state.obstacleSize === 10)
                         ) //entire else if (obs-size == 10)
                         {
                         clearInterval(leftwardProjectile)
@@ -813,7 +817,7 @@ class World extends Component {
                         && this.state.attackPosition.left > this.state.obstacleCoordinate2.left - 105)
                         && (this.state.attackPosition.top > this.state.obstacleCoordinate2.top
                         && this.state.attackPosition.top < this.state.obstacleCoordinate2.top + 100)
-                        && (this.state.obstacleSize2 == 10)
+                        && (this.state.obstacleSize2 === 10)
                         ) //entire else if (obs-size2 == 10)
                         {
                         clearInterval(leftwardProjectile)
@@ -841,7 +845,7 @@ class World extends Component {
                         top: this.state.currentPosition.top + 3
                     }
                 })
-                    leftwardProjectile
+                    // leftwardProjectile
             } // end of Fire Left if statement
     }
 
