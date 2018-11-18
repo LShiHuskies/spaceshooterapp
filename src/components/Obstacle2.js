@@ -4,7 +4,7 @@ class Obstacle2 extends Component {
     render() {
         return (
             <div>
-                <img src="https://space-facts.com/wp-content/uploads/mars-transparent.png" 
+                <img src="https://space-facts.com/wp-content/uploads/mars-transparent.png" alt="planet"
                     style={{
                         position: 'absolute',
                         width: `${this.props.obstacleSize2}%`,

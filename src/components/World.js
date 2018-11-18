@@ -76,9 +76,9 @@ class World extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener("keydown", this.handleControls)
+        window.addEventListener("keydown", this.handleControls);
 
-        var obstacleLocation =
+
             setInterval( () => {
                 this.setState({
                 obstacleCoordinate: {

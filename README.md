@@ -20,7 +20,7 @@ A user can create a new account and log in. If a user does not create an account
 2. Navigate to the GitHub for the [SpaceShip Shooter Api](https://github.com/LShiHuskies/space-shooter-api).
 3. Fork and clone the back-end api repository.
 4. Navigate to the file directory from your terminal for the back-end.
-5. Make sure to run bundle install, rake db:migrate, and rake db:seed.
+5. Make sure to run bundle install, rake db:drop, rake db:migrate, rake db:reset, and rake db:seed.
 6. Run rails start and you should be prompted to http://localhost:3000/. (Make sure the back-end api is running on http://localhost:3000/)
 7. Navigate to the file directory for the front-end, and run PORT=4000 npm start and you should be prompted to http://localhost:4000/.
 8. To start with a Demo account play, just click on Demo and you can simply start.
