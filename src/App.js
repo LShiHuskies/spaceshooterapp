@@ -51,7 +51,6 @@ class App extends Component {
     }), 7000)
   }
 
-
   filterGames = (data) => {
     if (this.state.currentGames.length === 0){
     this.setState({
@@ -59,14 +58,19 @@ class App extends Component {
       highScoreToggle: true,
     })
     this.state.allUsers.map(user => this.state.currentGames.filter(game => {
-      if (game.user_id === user.id){
-        let userInstance = user.username
-        let gameScore = game.score
-
+      return game.user_id === user.id ?
         this.setState({
-          infoArray: [...this.state.infoArray, {user : userInstance, score :gameScore}]
+          infoArray: [...this.state.infoArray, {user : user.username, score : game.score}]
         })
-    }
+       : null
+    //   if (game.user_id === user.id){
+    //     let userInstance = user.username
+    //     let gameScore = game.score
+    //
+    //     this.setState({
+    //       infoArray: [...this.state.infoArray, {user : userInstance, score : gameScore}]
+    //     })
+    // }
     }))
     let scores = this.state.infoArray.sort (function (d, e) {
       return e.score - d.score
